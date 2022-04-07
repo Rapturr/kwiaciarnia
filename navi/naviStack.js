@@ -27,11 +27,12 @@ function Screen1({onAdd}) {
 }
 export{Screen1}
 
-function Screen2({onAdd}) {
+function Screen2({route}) {
+    const val = route.params.onAdd;
     return(
         <Stack.Navigator>
-            <Stack.Screen name="ShoppingCart" onAdd={onAdd} component={ShoppingCart}/>
-            <Stack.Screen name="Payment" onAdd={onAdd} component={Payment}/>
+            <Stack.Screen name="ShoppingCart" initialParams={{onAdd:(route.params.onAdd)}} component={ShoppingCart}/>
+            <Stack.Screen name="Payment" component={Payment}/>
         </Stack.Navigator>
     )
 }

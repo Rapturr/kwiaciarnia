@@ -37,8 +37,8 @@ export default function tabNaviHome({onAdd}) {
           tabBarInactiveTintColor: 'gray',
         })}
         >
-            <Tab.Screen name = "Oferty" component = {Screen1} options={{headerShown:false, onAdd:onAdd}}/>
-            <Tab.Screen name = "Koszyk" onAdd={onAdd} component = {Screen2} options={{headerShown:false}}/>
+            <Tab.Screen name = "Oferty" component = {Screen1} options={{headerShown:false}}/>
+            <Tab.Screen name = "Koszyk" component = {Screen2} initialParams={{onAdd:(onAdd)}} options={{headerShown:false}}/>
             <Tab.Screen name = "Profil"  component = {Screen3} options={{headerShown:false}}/>
             <Tab.Screen name = "Info"  component = {Screen4} options={{headerShown:false}}/>
         </Tab.Navigator>
