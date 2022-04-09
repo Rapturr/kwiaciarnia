@@ -3,15 +3,15 @@ import { View, Text, Image } from "react-native"
 import { TouchableOpacity, Pressable } from "react-native-gesture-handler"
 import styles from '../style'
 
-const Przedmiot = ({ item, onToggle, search}) => {
+const KoszPrzedmiot = ({ item, onToggle}) => {
     return (
       <View style={styles.column}>
-        <TouchableOpacity onPress={ () => onToggle(String(item.image), item.cena, item.nazwa, item.opis, item.id)}>
+        <TouchableOpacity>
           <Image style={styles.image} source={{uri: (item.image)}}/>
         </TouchableOpacity>
-        <Text style={styles.Kat}>{item.nazwa}</Text>
+        <Text>{item.nazwa}</Text>
       </View>
     )
 }
 
-export default Przedmiot
+export default KoszPrzedmiot

@@ -5,16 +5,22 @@ const styles = StyleSheet.create({
       flex: 1,
       alignItems: 'center',
       justifyContent: 'center',
+      backgroundColor: '#333333',
+    },
+    darkBg: {
+      backgroundColor: '#333333',
     },
     Kategoria: {
       flexDirection: 'row',
       flexWrap: 'wrap',
       justifyContent: 'center',
       paddingTop:10,
+      backgroundColor: '#333333',
     },
     Kat: {
       marginLeft: 20,
       marginRight: 20,
+      color: 'white',
     },
     input: {
       borderWidth:2,
@@ -53,6 +59,17 @@ const styles = StyleSheet.create({
       marginBottom:20,
       padding: 15,
       backgroundColor: 'rgba(60,70,100,255)',
+    },
+    banner:{
+      width:'100%',
+      height:180,
+    },
+    bannerText:{
+      color:'rgba(86, 45, 128,255)',
+      textAlign:'center',
+      fontSize:30,
+      paddingTop:70,
+      fontWeight:'bold',
     },
   });
 

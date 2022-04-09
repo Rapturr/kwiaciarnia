@@ -4,11 +4,12 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs'
 import {Screen1, Screen2, Screen3, Screen4} from './naviStack'
 import { View, Image } from 'react-native';
 import { OfertyIcon, KoszykIcon, ProfilIcon, InfoIcon } from '../assets/icons';
+import styles from '../screens/style';
 
 const Tab = createBottomTabNavigator();
 
 
-export default function tabNaviHome({onAdd}) {
+export default function tabNaviHome({onAdd, kosz, addItem, removeItem}) {
     return(
         <NavigationContainer>
         <Tab.Navigator
@@ -35,12 +36,17 @@ export default function tabNaviHome({onAdd}) {
           },
           tabBarActiveTintColor: 'tomato',
           tabBarInactiveTintColor: 'gray',
+          tabBarStyle: {
+            height: 50,
+            paddingHorizontal: 5,
+            backgroundColor: 'rgba(34,36,40,1)',
+        }
         })}
         >
-            <Tab.Screen name = "Oferty" component = {Screen1} options={{headerShown:false}}/>
-            <Tab.Screen name = "Koszyk" component = {Screen2} initialParams={{onAdd:(onAdd)}} options={{headerShown:false}}/>
-            <Tab.Screen name = "Profil"  component = {Screen3} options={{headerShown:false}}/>
-            <Tab.Screen name = "Info"  component = {Screen4} options={{headerShown:false}}/>
+            <Tab.Screen name = "Oferty" component = {Screen1} initialParams={{onAdd:(onAdd)}} options={{headerShown:false}}/>
+            <Tab.Screen name = "Koszyk" component = {Screen2} initialParams={{onAdd:(onAdd), kosz:(kosz)}} options={{headerShown:false}}/>
+            <Tab.Screen name = "Profil"  component = {Screen3} initialParams={{onAdd:(onAdd)}} options={{headerShown:false}}/>
+            <Tab.Screen name = "Info"  component = {Screen4} initialParams={{onAdd:(onAdd)}} options={{headerShown:false}}/>
         </Tab.Navigator>
         </NavigationContainer>
     )

@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import {ImageBackground, TextInput, Pressable, ScrollView, Text, View, Image } from 'react-native';
 import styles from './style'
+import Banner from "./banner";
 
 
 export const profile = "";
@@ -19,7 +20,9 @@ export default function Login({navigation}) {
       }
 
     return (
-        <ScrollView>
+        <>
+        <Banner />
+        <ScrollView  style={styles.darkBg}>
             <View style={styles.container}>
                 <TextInput placeholder='Login'
                 onChangeText={(text)=>{setName(text)}} 
@@ -38,19 +41,20 @@ export default function Login({navigation}) {
                 <TextInput placeholder='Haslo'
                 onChangeText={(text)=>{setIngredients(text)}} 
                 style ={{borderWidth:2,
-                borderColor: '#AAAAAA',
-                marginBottom:20,
-                width:280,
-                padding: 15,
-                backgroundColor: 'rgba(1,1,1,0.8)',
-                color: 'white',}}multiline = {true}
-                numberOfLines={1}
-                maxLength={50}/>
+                    borderColor: '#AAAAAA',
+                    marginBottom:20,
+                    width:280,
+                    padding: 15,
+                    backgroundColor: 'rgba(1,1,1,0.8)',
+                    color: 'white',}}multiline = {true}
+                    numberOfLines={1}
+                    maxLength={50}/>
 
                 <Pressable style={styles.przycisk} onPress={()=>onSubmit()}>
                     <Text style={styles.przyciskText}>Zaloguj!</Text>
                 </Pressable>
             </View>
         </ScrollView>
+        </>
       )
 }

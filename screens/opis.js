@@ -2,6 +2,7 @@ import React from "react";
 import {ImageBackground, Pressable, Text, View, Image } from 'react-native';
 import { TouchableOpacity } from "react-native-gesture-handler";
 import styles from './style'
+import Banner from "./banner";
 
 //sciezka, cena, nazwa, opis, id
 
@@ -15,12 +16,13 @@ export default function Opis({navigation, route}) {
     
     return(
     <>
+        <Banner />
         <View style={styles.container}>
             <Image style={styles.image} source={{uri: (sciezka)}}/>
             <Text>{nazwa}</Text>
             <Text>Cena: {cena} zł</Text>
             <Text>{opis}</Text>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={()=>{route.params.onAdd(id,nazwa,cena,sciezka)}}>
                 <Text style={styles.przyciskText}>Dodaj do koszyka</Text>
             </TouchableOpacity>
         </View>
