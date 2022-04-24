@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useFocusEffect } from '@react-navigation/native';
-import {ImageBackground, Pressable, Text, View, Image } from 'react-native';
+import {Pressable, Text, View } from 'react-native';
 import styles from './style'
 import KoszPrzedmiot from "./Przedmioty/koszPrzedmioty";
 import Banner from "./banner";
@@ -41,12 +41,16 @@ export default function ShoppingCart({navigation, route}) {
                 <KoszPrzedmiot key={Math.floor(Math.random()*10000)}
                 item = {item}/>
             ))}
-            <Text>Suma: {sum}</Text>
+            <Text style={{color: '#917ab0', fontSize:20, marginTop: 30, marginLeft: 30}}>Suma: {sum}</Text>
         </View>
 
         <View style={styles.koszykPrzycisk}>
             <Pressable onPress={()=>{fun(), navigation.navigate('Podsumowanie', {suma:suma, clear:clear})}}>
-                <Text style={styles.przyciskTextKoszyk}>Podsumowanie!</Text>
+                <Text style={styles.przyciskTextKoszyk}>Podsumowanie</Text>
+            </Pressable>
+            
+            <Pressable onPress={()=>{clear(), navigation.navigate('ShoppingCart')}}>
+                <Text style={styles.przyciskTextKoszyk}>Wyczyść koszyk</Text>
             </Pressable>
         </View>
         </ScrollView>

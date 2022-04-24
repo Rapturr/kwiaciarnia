@@ -17,12 +17,12 @@ export default function Opis({navigation, route}) {
     return(
     <>
         <Banner />
-        <View style={styles.container}>
+        <View style={styles.containerOpis}>
             <Image style={styles.image} source={{uri: (sciezka)}}/>
-            <Text>{nazwa}</Text>
-            <Text>Cena: {cena} zł</Text>
-            <Text>{opis}</Text>
-            <TouchableOpacity onPress={()=>{route.params.onAdd(id,nazwa,cena,sciezka)}}>
+            <Text style={styles.opisy}>{nazwa}</Text>
+            <Text style={styles.opisy}>Cena: {cena} zł</Text>
+            <Text style={styles.opisy}>{opis}</Text>
+            <TouchableOpacity style={{marginTop:20, justifyContent: 'center',}} onPress={()=>{route.params.onAdd(id,nazwa,cena,sciezka)}}>
                 <Text style={styles.przyciskText}>Dodaj do koszyka</Text>
             </TouchableOpacity>
         </View>

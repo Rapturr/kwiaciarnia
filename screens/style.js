@@ -7,6 +7,12 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       backgroundColor: '#333333',
     },
+    containerOpis: {
+      flex: 1,
+      alignItems: 'center',
+      justifyContent: 'flex-start',
+      backgroundColor: '#333333',
+    },
     darkBg: {
       backgroundColor: '#333333',
     },
@@ -52,7 +58,21 @@ const styles = StyleSheet.create({
     Kat: {
       marginLeft: 20,
       marginRight: 20,
-      color: 'white',
+      color: '#917ab0',
+    },
+    opisy: {
+      marginLeft: 20,
+      marginRight: 20,
+      color: '#917ab0',
+    },
+    nazwy: {
+      marginLeft: 20,
+      marginRight: 20,
+      paddingRight:5,
+      paddingLeft:5,
+      borderRadius:6,
+      backgroundColor: 'rgba(40,40,40,250)',
+      color: '#917ab0',
     },
     row: {
       flexDirection: 'row',
@@ -66,7 +86,8 @@ const styles = StyleSheet.create({
     image: {
       width: 150,
       height: 150,
-      margin: 5,
+      margin: 10,
+      marginTop:30,
       resizeMode: 'contain',
     },
     koszimage: {
@@ -111,11 +132,12 @@ const styles = StyleSheet.create({
     infoKat:{
       fontSize:15,
       fontWeight: 'bold',
-      color:"rgba(160,180,150,255)",
+      color:'#613a70',
     },
     infotext:{
+      //marginTop:10,
       fontSize:15,
-      color:"rgba(140,180,100,255)",
+      color:'#917ab0',
     },
     koszykPrzycisk:{
       marginTop: 40,
@@ -128,6 +150,7 @@ const styles = StyleSheet.create({
       width: '40%',
     },
     koszykColumn1:{
+      marginTop: 20,
       flexDirection: 'column',
       alignItems: 'flex-start',
       width: '60%',
@@ -144,6 +167,17 @@ const styles = StyleSheet.create({
       backgroundColor: '#333333',
       flexDirection: 'row',
       flexWrap: 'wrap',
+    },
+    daneUzytkownika: {
+      marginBottom: 30,
+      marginLeft: 20,
+      fontSize: 17,
+      marginRight: 20,
+      paddingRight:5,
+      paddingLeft:5,
+      borderRadius:6,
+      backgroundColor: 'rgba(40,40,40,250)',
+      color: '#917ab0',
     },
   });
 

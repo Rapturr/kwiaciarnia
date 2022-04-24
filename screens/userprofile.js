@@ -20,8 +20,9 @@ export default function Userprofile({navigation, route}) {
             <>
             <Banner />
                 <View style={styles.container}>
-                    <Text>{username}</Text>
-                    <Text>{info}</Text>
+                    <Text style={styles.daneUzytkownika}>Nazwa Użytkownika:  {username}</Text>
+                    <Text style={styles.daneUzytkownika}>Adres e-mail:  {info}</Text>
+                    <Text style={{marginBottom:30}}></Text>
                     <Pressable onPress={()=>{login(0,'','')}}>
                         <Text style={styles.przyciskText}>Wyloguj</Text>
                     </Pressable>

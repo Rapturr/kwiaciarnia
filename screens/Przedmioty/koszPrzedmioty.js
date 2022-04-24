@@ -13,7 +13,7 @@ const KoszPrzedmiot = ({ item, dodajcene}) => {
         </View>
         <View style = {styles.koszykColumn1}>
           <Text style={styles.infotext}>{item.nazwa}</Text>
-          <Text style={styles.infotext}>{item.cena} zł</Text>
+          <Text style={styles.infotext}>Cena: {item.cena} zł</Text>
         </View>
       </View>
       </>

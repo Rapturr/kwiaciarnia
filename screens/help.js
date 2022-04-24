@@ -26,7 +26,7 @@ export default function Help({navigation}) {
                     <Text style={styles.infoKat}></Text>
                 </View>
                 <View style={styles.helpContainerKat1}>
-                    <Text style={styles.infotext}>Kwiatowa Przesyłka</Text>
+                    <Text style={styles.infotext}>Poczta Kwiatowa</Text>
                 </View>
                 <View style={styles.helpContainerKat}>
                     <Text style={styles.infoKat}>Adres</Text>
@@ -40,6 +40,13 @@ export default function Help({navigation}) {
                 </View>
                 <View style={styles.helpContainerKat1}>
                     <Text style={styles.infotext}>Komunikacja człowiek-komputer</Text>
+                </View>
+
+                <View style={styles.helpContainerKat}>
+                    <Text style={styles.infoKat}>Grupa:</Text>
+                </View>
+                <View style={styles.helpContainerKat1}>
+                    <Text style={styles.infotext}>3ID13A</Text>
                 </View>
                 
             </View>

@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
-import {ImageBackground, Pressable, Text, View, Image } from 'react-native';
+import React from "react";
+import {Pressable, Text, View } from 'react-native';
 import styles from './style'
 import Banner from "./banner";
 import { ScrollView } from "react-native-gesture-handler";
 
 
-var suma;
 export default function Podsumowanie({navigation, route}) {
     const suma = route.params.suma;
     return(
@@ -13,8 +12,8 @@ export default function Podsumowanie({navigation, route}) {
         <Banner />
         <ScrollView style={styles.darkBg}>
 
-        <View>
-            <Text style = {{color: 'rgba(130,200,150,255)', fontSize:20, marginTop: 50, marginLeft: 10}}>Suma: {suma}</Text>
+        <View style = {{alignContent: 'center', justifyContent: 'center'}}>
+            <Text style = {{color: '#917ab0', fontSize:20, marginTop: 50, marginLeft:'40%',}}>Suma: {suma}</Text>
         </View>
 
         <View style={styles.koszykPrzycisk}>

@@ -9,7 +9,7 @@ const Przedmiot = ({ item, onToggle, search}) => {
         <TouchableOpacity onPress={ () => onToggle(String(item.image), item.cena, item.nazwa, item.opis, item.id)}>
           <Image style={styles.image} source={{uri: (item.image)}}/>
         </TouchableOpacity>
-        <Text style={styles.Kat}>{item.nazwa}</Text>
+        <Text style={styles.nazwy}>{item.nazwa}</Text>
       </View>
     )
 }
