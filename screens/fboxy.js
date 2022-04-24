@@ -1,7 +1,7 @@
 import React from "react";
 import {ImageBackground,TouchableOpacity, Pressable, Text, View, Image, ScrollView } from 'react-native';
 import styles from './style'
-import { ZestawIcon, BukietyIcon, FlowerBoxIcon, Obwod } from "../assets/icons";
+import { ZestawIcon, BukietyIcon, FlowerBoxIconHl, Obwod } from "../assets/icons";
 import {FBLista } from "./Przedmioty/bukietyLista";
 import Przedmiot from "./Przedmioty/przedmiot";
 import Banner from "./banner";
@@ -25,7 +25,7 @@ export default function Flowerbox({navigation, route}) {
                 <Text style={styles.Kat}>Bukiety</Text>
             </Pressable>
             <Pressable onPress={() => { navi("Flowerbox"); } }>
-                <FlowerBoxIcon />
+                <FlowerBoxIconHl />
                 <Text style={styles.Kat}>Flowerboxy</Text>
             </Pressable>
             <Pressable onPress={() => { navi("Zestawy"); } }>

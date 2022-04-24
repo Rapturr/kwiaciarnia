@@ -1,7 +1,7 @@
 import React from "react";
 import {ImageBackground,TouchableOpacity, Pressable, Text, View, Image, ScrollView } from 'react-native';
 import styles from './style'
-import { ZestawIcon, BukietyIcon, FlowerBoxIcon, Obwod } from "../assets/icons";
+import { ZestawIconHl, BukietyIcon, FlowerBoxIcon, Obwod } from "../assets/icons";
 import {ZLista } from "./Przedmioty/bukietyLista";
 import Przedmiot from "./Przedmioty/przedmiot";
 import Banner from "./banner";
@@ -30,7 +30,7 @@ export default function Zestawy({navigation, route}) {
                 <Text style={styles.Kat}>Flowerboxy</Text>
             </Pressable>
             <Pressable onPress={() => { navi("Zestawy"); } }>
-                <ZestawIcon style={styles.zestawIconStyle} />
+                <ZestawIconHl style={styles.zestawIconStyle} />
                 <Text style={styles.Kat}>Zestawy</Text>
             </Pressable>
         </View>

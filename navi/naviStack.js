@@ -2,6 +2,7 @@ import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import Home from "../screens/home"
 import ShoppingCart from '../screens/cart';
+import Podsumowanie from '../screens/podsumowanie';
 import Login from '../screens/login';
 import Payment from '../screens/buy';
 import Userprofile from '../screens/userprofile';
@@ -27,11 +28,11 @@ function Screen1({route}) {
 export{Screen1}
 
 function Screen2({route}) {
-    const val = route.params.onAdd;
     return(
         <Stack.Navigator>
             <Stack.Screen name="ShoppingCart" initialParams={{onAdd:(route.params.onAdd), kosz:(route.params.kosz)}} component={ShoppingCart} options={{headerShown:false}}/>
             <Stack.Screen name="Payment" component={Payment} options={{headerShown:false}}/>
+            <Stack.Screen name="Podsumowanie" component={Podsumowanie} options={{headerShown:false}}/>
         </Stack.Navigator>
     )
 }

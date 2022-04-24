@@ -9,10 +9,8 @@ LogBox.ignoreLogs([
 
 export default function App() {
   const [koszyk, setKoszyk] = useState([]);
+  const [empty, setempty] = useState([]);
 
-  /*const onAdd = () => {
-    console.log("OnAdd w app.tsx");
-  }*/
   const onAdd = (zid,name, price, url) => {
     const item = 
       {
@@ -24,14 +22,13 @@ export default function App() {
     ;
     koszyk.push(item);
   }
-  const addItem = () => {
-    console.log("add");
-  }
+  
   const removeItem = () => {
     console.log("Removed");
   }
 
+
   return (
-    <Navigation onAdd={onAdd} kosz = {koszyk} addItem={addItem} removeItem={removeItem}/>
+    <Navigation onAdd={onAdd} kosz = {koszyk} removeItem={removeItem} />
   );
 }

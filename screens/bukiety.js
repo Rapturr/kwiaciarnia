@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import {ImageBackground, Svg, Pressable, Text, View, Image, ScrollView } from 'react-native';
-import { ZestawIcon, BukietyIcon, FlowerBoxIcon, Obwod } from "../assets/icons";
+import { ZestawIcon, BukietyIconHl, FlowerBoxIcon, Obwod } from "../assets/icons";
 import styles from './style'
 import {BLista } from "./Przedmioty/bukietyLista";
 import Przedmiot from "./Przedmioty/przedmiot";
@@ -22,7 +22,7 @@ export default function Bukiety({navigation, route}) {
         <Banner />
         <View style={styles.Kategoria}>
             <Pressable onPress={() => { navi("Bukiety"); } }>
-                <BukietyIcon />
+                <BukietyIconHl />
                 <Text style={styles.Kat}>Bukiety</Text>
             </Pressable>
             <Pressable onPress={() => { navi("Flowerbox"); } }>

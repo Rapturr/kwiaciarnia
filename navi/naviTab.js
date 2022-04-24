@@ -5,11 +5,12 @@ import {Screen1, Screen2, Screen3, Screen4} from './naviStack'
 import { View, Image } from 'react-native';
 import { OfertyIcon, KoszykIcon, ProfilIcon, InfoIcon } from '../assets/icons';
 import styles from '../screens/style';
+import { userId } from '../App';
 
 const Tab = createBottomTabNavigator();
 
 
-export default function tabNaviHome({onAdd, kosz, addItem, removeItem}) {
+export default function tabNaviHome({onAdd, kosz, clear, removeItem}) {
     return(
         <NavigationContainer>
         <Tab.Navigator
@@ -45,7 +46,7 @@ export default function tabNaviHome({onAdd, kosz, addItem, removeItem}) {
         >
             <Tab.Screen name = "Oferty" component = {Screen1} initialParams={{onAdd:(onAdd)}} options={{headerShown:false}}/>
             <Tab.Screen name = "Koszyk" component = {Screen2} initialParams={{onAdd:(onAdd), kosz:(kosz)}} options={{headerShown:false}}/>
-            <Tab.Screen name = "Profil"  component = {Screen3} initialParams={{onAdd:(onAdd)}} options={{headerShown:false}}/>
+            <Tab.Screen name = "Profil" component = {Screen3} options={{headerShown:false}}/>
             <Tab.Screen name = "Info"  component = {Screen4} initialParams={{onAdd:(onAdd)}} options={{headerShown:false}}/>
         </Tab.Navigator>
         </NavigationContainer>
