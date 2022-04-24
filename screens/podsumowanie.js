@@ -19,7 +19,7 @@ export default function Podsumowanie({navigation, route}) {
 
         <View style={styles.koszykPrzycisk}>
             <Pressable onPress={()=>{navigation.navigate('ShoppingCart'), route.params.clear()}}>
-                <Text style={styles.przyciskTextKoszyk}>Kup!</Text>
+                <Text style={styles.przyciskTextKoszyk}>Zapłać!</Text>
             </Pressable>
         </View>
         
