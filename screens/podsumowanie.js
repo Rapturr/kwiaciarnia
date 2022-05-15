@@ -5,10 +5,24 @@ import Banner from "./banner";
 import { ScrollView } from "react-native-gesture-handler";
 
 
+
 export default function Podsumowanie({navigation, route}) {
     const suma = route.params.suma;
-    return(
-        <>
+    const payment = ()=>{
+        navigation.navigate('ShoppingCart')
+        route.params.clear()
+    }
+    if(global.variable <0){
+        return(
+            <View style={styles.koszykPrzycisk}>
+                {navigation.navigate("ShoppingCart")}
+            </View>
+        ) 
+    }
+    else{
+
+        return(
+            <>
         <Banner />
         <ScrollView style={styles.darkBg}>
 
@@ -17,7 +31,7 @@ export default function Podsumowanie({navigation, route}) {
         </View>
 
         <View style={styles.koszykPrzycisk}>
-            <Pressable onPress={()=>{navigation.navigate('ShoppingCart'), route.params.clear()}}>
+            <Pressable onPress={()=>{payment()}}>
                 <Text style={styles.przyciskTextKoszyk}>Zapłać!</Text>
             </Pressable>
         </View>
@@ -25,5 +39,6 @@ export default function Podsumowanie({navigation, route}) {
         </ScrollView>
         </>
     ) 
+    }
 }
 //navigation.navigate('ShoppingCart'), 

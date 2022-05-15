@@ -8,9 +8,22 @@ LogBox.ignoreLogs([
 
 export const urlLink = "https://api.npoint.io/c83bbc159bfb7c052096";
 
+global.variable = -1;
+//const [userLog, setUserLog] = useState(-1);
+
+export function userlogfun({num}){
+  //setUserLog(num);
+  console.log("dddd")
+}
+export function getuserlogfun(){
+  //var zm = userLog;
+  //return zm;
+  console.log("dddd")
+}
+
 export default function App() {
   const [koszyk, setKoszyk] = useState([]);
-  const [empty, setempty] = useState([]);
+  //const [userLog, setUserLog] = useState(-1);
 
   const onAdd = (zid,name, price, url) => {
     const item = 
@@ -30,6 +43,6 @@ export default function App() {
 
 
   return (
-    <Navigation onAdd={onAdd} kosz = {koszyk} removeItem={removeItem} />
+    <Navigation onAdd={onAdd} kosz = {koszyk} />
   );
 }

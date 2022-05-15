@@ -10,7 +10,7 @@ import { userId } from '../App';
 const Tab = createBottomTabNavigator();
 
 
-export default function tabNaviHome({onAdd, kosz, clear, removeItem}) {
+export default function tabNaviHome({onAdd, kosz }) {
     return(
         <NavigationContainer>
         <Tab.Navigator

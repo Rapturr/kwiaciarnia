@@ -34,7 +34,7 @@ export default function Login({navigation, route}) {
 
     const onSubmit = () => {
         //setId(0)
-        var id = 0;
+        var id = -1;
         var info = '';
         serverdata.map((user)=>{
             if(user.login == username && user.haslo == password){

@@ -2,20 +2,21 @@ import React, { useState } from "react";
 import {ImageBackground, Pressable, Text, View, Image } from 'react-native';
 import styles from './style'
 import Banner from "./banner";
+import { getuserlogfun } from "../App";
 
 export default function Userprofile({navigation, route}) {
-    const [userId, setUser] = useState(0);
+    const [userId, setUser] = useState(-1);
     const [username , setUsername] = useState('');
     const [info , setInfo] = useState('');
 
     const login = (num, username, info) => {
-        if( num >= 0){
           setUser(num);
           setUsername(username);
           setInfo(info);
-        }
+          global.variable = num;
+          //console.log("Globalna  "+global.variable);
     }
-    if (userId > 0) {
+    if (userId >= 0) {
         return(
             <>
             <Banner />
@@ -23,7 +24,7 @@ export default function Userprofile({navigation, route}) {
                     <Text style={styles.daneUzytkownika}>Nazwa Użytkownika:  {username}</Text>
                     <Text style={styles.daneUzytkownika}>Adres e-mail:  {info}</Text>
                     <Text style={{marginBottom:30}}></Text>
-                    <Pressable onPress={()=>{login(0,'','')}}>
+                    <Pressable onPress={()=>{login(-1,'','')}}>
                         <Text style={styles.przyciskText}>Wyloguj</Text>
                     </Pressable>
                 </View>

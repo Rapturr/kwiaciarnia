@@ -11,6 +11,7 @@ var suma;
 export default function ShoppingCart({navigation, route}) {
     const [kosz, setKosz] = useState([]);
     const [sum, setsum] = useState(suma);
+    const [check, setcheck] = useState(global.variable);
     
     const fun=()=>{
         //console.log(route.params.kosz);
@@ -26,13 +27,15 @@ export default function ShoppingCart({navigation, route}) {
     }
 
     useFocusEffect(() => {
+        setcheck(global.variable)
         setKosz(route.params.kosz);
         fun();
         setsum(suma);
     });
-    
-    return(
-        <>
+
+    if(global.variable<0){
+        return(
+            <>
         <Banner />
         <ScrollView style={styles.darkBg}>
         
@@ -40,7 +43,34 @@ export default function ShoppingCart({navigation, route}) {
             {kosz.map((item)=>(
                 <KoszPrzedmiot key={Math.floor(Math.random()*10000)}
                 item = {item}/>
-            ))}
+                ))}
+            <Text style={{color: '#917ab0', fontSize:20, marginTop: 30, marginLeft: 30}}>Suma: {sum}</Text>
+        </View>
+
+        <View style={styles.koszykPrzycisk}>
+            <Pressable>
+                <Text style={styles.przyciskTextKoszyk}>Musisz być zalogowany/a</Text>
+            </Pressable>
+            
+            <Pressable onPress={()=>{clear(), navigation.navigate('ShoppingCart')}}>
+                <Text style={styles.przyciskTextKoszyk}>Wyczyść koszyk</Text>
+            </Pressable>
+        </View>
+        </ScrollView>
+        </>
+    )
+    }
+    else{
+
+        return(
+            <>
+        <Banner />
+        <ScrollView style={styles.darkBg}>
+        <View>
+            {kosz.map((item)=>(
+                <KoszPrzedmiot key={Math.floor(Math.random()*10000)}
+                item = {item}/>
+                ))}
             <Text style={{color: '#917ab0', fontSize:20, marginTop: 30, marginLeft: 30}}>Suma: {sum}</Text>
         </View>
 
@@ -55,5 +85,6 @@ export default function ShoppingCart({navigation, route}) {
         </View>
         </ScrollView>
         </>
-    ) 
+        ) 
+    }
 }

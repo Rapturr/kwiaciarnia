@@ -41,6 +41,7 @@ export default function Register({ navigation, route, newData}){
             }
             id = user.id;
         })
+        if(login != "" && haslo != "")
         if(!exist){
             id+=1;
             //console.log("Nowe Konto ID: "+id+" haslo:"+haslo+" info:"+info+"")
@@ -71,12 +72,12 @@ export default function Register({ navigation, route, newData}){
         newid = zm.id;
       })
       newid+=1;
-      console.log("NEW ID".newid);
+      //console.log("NEW ID".newid);
       data.id = newid;
       
       resStr+=JSON.stringify(data);
       resStr+="]";
-      console.log(resStr);
+      //console.log(resStr);
       
       const res = await fetch(urlLink+'',{
           method: 'post',
@@ -94,6 +95,7 @@ export default function Register({ navigation, route, newData}){
         <Banner />
         <ScrollView  style={styles.darkBg}>
             <View style={styles.container}>
+              <Text></Text>
                 <TextInput placeholder='Login'
                 onChangeText={(text)=>{setUsername(text)}} 
                 style ={{borderWidth:2,
