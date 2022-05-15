@@ -37,6 +37,9 @@ export default function Userprofile({navigation, route}) {
                     <Pressable onPress={()=>{navigation.navigate("Login",{login:(login)})}}>
                         <Text style={styles.przyciskText}>Zaloguj się</Text>
                     </Pressable>
+                    <Pressable onPress={()=>{navigation.navigate("Register",{login:(login)})}}>
+                        <Text style={styles.przyciskText}>Załóż konto</Text>
+                    </Pressable>
                 </View>
             </>
         ) 

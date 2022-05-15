@@ -11,6 +11,7 @@ import Bukiety from '../screens/bukiety';
 import Flowerbox from '../screens/fboxy';
 import Zestawy from '../screens/zestawy';
 import Opis from '../screens/opis';
+import Register from '../screens/register';
 
 
 const Stack = createStackNavigator();
@@ -43,6 +44,7 @@ function Screen3() {
         <Stack.Navigator>
             <Stack.Screen name="UserProfile" component={Userprofile} options={{headerShown:false}}/>
             <Stack.Screen name="Login" component={Login} options={{headerShown:false}}/>
+            <Stack.Screen name="Register" component={Register} options={{headerShown:false}}/>
         </Stack.Navigator>
     )
 }

@@ -6,6 +6,7 @@ LogBox.ignoreLogs([
   'Non-serializable values were found in the navigation state',
 ]);
 
+export const urlLink = "https://api.npoint.io/c83bbc159bfb7c052096";
 
 export default function App() {
   const [koszyk, setKoszyk] = useState([]);

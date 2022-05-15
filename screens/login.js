@@ -1,21 +1,42 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {ImageBackground, TextInput, Pressable, ScrollView, Text, View, Image } from 'react-native';
 import styles from './style'
 import Banner from "./banner";
+import {urlLink} from '../App'
 import { Users } from "./uzytkownicy";
 
 export const profile = "";
 
 export default function Login({navigation, route}) {
+    const [serverdata, setdata] = useState([])
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
+
+    useEffect(() => {
+        const getData = async ()=>{
+          const dataFromServer = await fetchData()
+          //setdata(dataFromServer)
+        }
+      getData()
+    }, [])
+    
+      const fetchData = async() =>{
+        const res = await fetch(urlLink+'',{headers: {
+          'Content-type': 'application/json',
+          'mode': 'cors',
+          'Access-Control-Allow-Origin': '*',
+          }})
+        const data = await res.json()
+        setdata(data);
+        return data
+      }
 
     const onSubmit = () => {
         //setId(0)
         var id = 0;
         var info = '';
-        Users.map((user)=>{
+        serverdata.map((user)=>{
             if(user.login == username && user.haslo == password){
                 id = user.id
                 info = user.info;
