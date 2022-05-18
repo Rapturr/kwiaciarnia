@@ -32,7 +32,7 @@ export default function Podsumowanie({navigation, route}) {
 
         <View style={styles.koszykPrzycisk}>
             <Pressable onPress={()=>{payment()}}>
-                <Text style={styles.przyciskTextKoszyk}>Zapłać!</Text>
+                <Text style={styles.przyciskText}>Zapłać!</Text>
             </Pressable>
         </View>
         

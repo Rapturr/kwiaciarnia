@@ -49,11 +49,11 @@ export default function ShoppingCart({navigation, route}) {
 
         <View style={styles.koszykPrzycisk}>
             <Pressable>
-                <Text style={styles.przyciskTextKoszyk}>Musisz być zalogowany/a</Text>
+                <Text style={styles.przyciskText}>Musisz być zalogowany/a</Text>
             </Pressable>
             
             <Pressable onPress={()=>{clear(), navigation.navigate('ShoppingCart')}}>
-                <Text style={styles.przyciskTextKoszyk}>Wyczyść koszyk</Text>
+                <Text style={styles.przyciskText}>Wyczyść koszyk</Text>
             </Pressable>
         </View>
         </ScrollView>
@@ -76,11 +76,11 @@ export default function ShoppingCart({navigation, route}) {
 
         <View style={styles.koszykPrzycisk}>
             <Pressable onPress={()=>{fun(), navigation.navigate('Podsumowanie', {suma:suma, clear:clear})}}>
-                <Text style={styles.przyciskTextKoszyk}>Podsumowanie</Text>
+                <Text style={styles.przyciskText}>Podsumowanie</Text>
             </Pressable>
             
             <Pressable onPress={()=>{clear(), navigation.navigate('ShoppingCart')}}>
-                <Text style={styles.przyciskTextKoszyk}>Wyczyść koszyk</Text>
+                <Text style={styles.przyciskText}>Wyczyść koszyk</Text>
             </Pressable>
         </View>
         </ScrollView>

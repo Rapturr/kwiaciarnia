@@ -32,7 +32,7 @@ export default function Help({navigation}) {
                     <Text style={styles.infoKat}>Adres</Text>
                 </View>
                 <View style={styles.helpContainerKat1}>
-                    <Text style={styles.infotext}>aleja Tysiąclecia Państwa Polskiego 7, 25-314 Kielce</Text>
+                    <Text style={styles.infotext}>Aleja Tysiąclecia Państwa Polskiego 7, 25-314 Kielce</Text>
                 </View>
 
                 <View style={styles.helpContainerKat}>
@@ -55,13 +55,13 @@ export default function Help({navigation}) {
             </View>
 
             <View style={styles.helpContainer}>
-
                 <View style={styles.helpContainerKat}>
                     <Text style={styles.infoKat}>NIP:</Text>
                 </View>
                 <View style={styles.helpContainerKat1}>
                     <Text style={styles.infotext}>8913235769</Text>
                 </View>
+                
                 <View style={styles.helpContainerKat}>
                     <Text style={styles.infoKat}>Tel:</Text>
                 </View>

@@ -103,14 +103,14 @@ const styles = StyleSheet.create({
       width: 140,
       height: 140,
     },
-    przyciskText:{
-      marginBottom:20,
-      padding: 15,
-      backgroundColor: 'rgba(60,70,100,255)',
-    },
     banner:{
       width:'100%',
       height:180,
+    },
+    banner_underside:{
+      backgroundColor:'rgba(30,30,30,255)',
+      width:'100%',
+      height:10,
     },
     bannerText:{
       color:'rgba(86,45,128,255)',
@@ -119,9 +119,10 @@ const styles = StyleSheet.create({
       paddingTop:70,
       fontWeight:'bold',
     },
-    przyciskTextKoszyk:{
+    przyciskText:{
       marginBottom:20,
       padding: 15,
+      color: 'rgba(126,145,188,255)',
       backgroundColor: 'rgba(60,70,100,255)',
     },
     info:{
