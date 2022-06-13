@@ -19,20 +19,20 @@ export default function Help({navigation}) {
                     <Text style={styles.infoKat}>Autor:</Text>
                 </View>
                 <View style={styles.helpContainerKat1}>
-                    <Text style={styles.infotext}>Natalia Skrzyniarz</Text>
+                    <Text style={styles.infotext}>Jakub Pawlik</Text>
                 </View>
 
                 <View style={styles.helpContainerKat}>
                     <Text style={styles.infoKat}></Text>
                 </View>
                 <View style={styles.helpContainerKat1}>
-                    <Text style={styles.infotext}>Poczta Kwiatowa</Text>
+                    <Text style={styles.infotext}>Kwiaciarnia</Text>
                 </View>
                 <View style={styles.helpContainerKat}>
                     <Text style={styles.infoKat}>Adres</Text>
                 </View>
                 <View style={styles.helpContainerKat1}>
-                    <Text style={styles.infotext}>Aleja Tysiąclecia Państwa Polskiego 7, 25-314 Kielce</Text>
+                    <Text style={styles.infotext}>Ul. IX Wieków Kielc</Text>
                 </View>
 
                 <View style={styles.helpContainerKat}>
@@ -46,7 +46,7 @@ export default function Help({navigation}) {
                     <Text style={styles.infoKat}>Grupa:</Text>
                 </View>
                 <View style={styles.helpContainerKat1}>
-                    <Text style={styles.infotext}>3ID13A</Text>
+                    <Text style={styles.infotext}>3ID14A</Text>
                 </View>
                 
             </View>
@@ -55,30 +55,24 @@ export default function Help({navigation}) {
             </View>
 
             <View style={styles.helpContainer}>
-                <View style={styles.helpContainerKat}>
-                    <Text style={styles.infoKat}>NIP:</Text>
-                </View>
-                <View style={styles.helpContainerKat1}>
-                    <Text style={styles.infotext}>8913235769</Text>
-                </View>
-                
+            
                 <View style={styles.helpContainerKat}>
                     <Text style={styles.infoKat}>Tel:</Text>
                 </View>
                 <View style={styles.helpContainerKat1}>
-                    <Text style={styles.infotext}>+48 12 345 67 89</Text>
+                    <Text style={styles.infotext}>+48 12 121 12 12</Text>
                 </View>
                 <View style={styles.helpContainerKat}>
                     <Text style={styles.infoKat}>Fax:</Text>
                 </View>
                 <View style={styles.helpContainerKat1}>
-                    <Text style={styles.infotext}>+48 12 312 32 34</Text>
+                    <Text style={styles.infotext}>+48 12 121 12 23</Text>
                 </View>
                 <View style={styles.helpContainerKat}>
                     <Text style={styles.infoKat}>E-Mail:</Text>
                 </View>
                 <View style={styles.helpContainerKat1}>
-                    <Text style={styles.infotext}>biuro@kwiatowaprzesylka.com</Text>
+                    <Text style={styles.infotext}>pawlikkuba@onmail.com</Text>
                 </View>
             </View>
 
@@ -89,10 +83,10 @@ export default function Help({navigation}) {
             <View style={styles.helpContainer}>
 
                 <View style={styles.helpContainerKat}>
-                    <Text style={styles.infoKat}>ING Bank Śląski:</Text>
+                    <Text style={styles.infoKat}>Bank:</Text>
                 </View>
                 <View style={styles.helpContainerKat1}>
-                    <Text style={styles.infotext}>95 1050 1234 2345 3456 4567 5678</Text>
+                    <Text style={styles.infotext}>12 1212 1212 1212 1212 1212 1212</Text>
                 </View>
                 
             </View>

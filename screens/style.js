@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
       flexWrap: 'wrap',
       justifyContent: 'center',
       paddingTop:10,
-      backgroundColor: '#333333',
+      backgroundColor: '#252525',
     },
     helpWrap: {
       flex: 1,
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     },
     banner:{
       width:'100%',
-      height:180,
+      height:140,
     },
     banner_underside:{
       backgroundColor:'rgba(30,30,30,255)',
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
       height:10,
     },
     bannerText:{
-      color:'rgba(86,45,128,255)',
+      color:'rgba(120,120,228,255)',
       textAlign:'center',
       fontSize:30,
       paddingTop:70,
@@ -128,17 +128,17 @@ const styles = StyleSheet.create({
     info:{
       fontSize:22,
       fontWeight: 'bold',
-      color:"rgba(126,85,168,255)",
+      color:"rgba(120,100,228,255)",
     },
     infoKat:{
       fontSize:15,
       fontWeight: 'bold',
-      color:'#613a70',
+      color:"rgba(110,90,208,255)",
     },
     infotext:{
       //marginTop:10,
       fontSize:15,
-      color:'#917ab0',
+      color:"rgba(120,80,198,255)",
     },
     koszykPrzycisk:{
       marginTop: 40,
@@ -179,6 +179,13 @@ const styles = StyleSheet.create({
       borderRadius:6,
       backgroundColor: 'rgba(40,40,40,250)',
       color: '#917ab0',
+    },
+    wyszukiwanie: {
+      width: "80%",
+      marginLeft: "auto",
+      marginRight: "auto",
+      marginTop:5,
+      backgroundColor: "rgba(80,80,80,100)"
     },
   });
 

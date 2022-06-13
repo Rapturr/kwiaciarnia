@@ -2,6 +2,7 @@ import React from "react";
 import {ImageBackground, Pressable, Text, View, Image } from 'react-native';
 import styles from './style'
 import Banner from "./banner";
+
 /*
 const express = require("express");
 const bodyParser = require("body-parser");

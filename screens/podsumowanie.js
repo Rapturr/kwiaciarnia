@@ -1,5 +1,5 @@
 import React from "react";
-import {Pressable, Text, View } from 'react-native';
+import {Pressable, Text, View, Linking} from 'react-native';
 import styles from './style'
 import Banner from "./banner";
 import { ScrollView } from "react-native-gesture-handler";
@@ -9,6 +9,7 @@ import { ScrollView } from "react-native-gesture-handler";
 export default function Podsumowanie({navigation, route}) {
     const suma = route.params.suma;
     const payment = ()=>{
+        Linking.openURL("https://storage.googleapis.com/kckbaza/success.html");
         navigation.navigate('ShoppingCart')
         route.params.clear()
     }

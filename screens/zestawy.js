@@ -5,8 +5,23 @@ import { ZestawIconHl, BukietyIcon, FlowerBoxIcon, Obwod } from "../assets/icons
 import {ZLista } from "./Przedmioty/bukietyLista";
 import Przedmiot from "./Przedmioty/przedmiot";
 import Banner from "./banner";
+import { Searchbar } from 'react-native-paper';
 
 export default function Zestawy({navigation, route}) {
+    const [searchQuery, setSearchQuery] = React.useState('');
+
+    const onChangeSearch = query => setSearchQuery(query);
+    const clearString = (value) => {
+        return value.replace(/\s/g, '').toLowerCase();
+      }
+      const checkData = (value) => {
+        return clearString(value.name).indexOf(clearString(searchQuery)) >= 0
+      }
+      const getData = () => {
+    
+      return [...new Set(list.searchQuery(checkData))];
+    }
+
     const navi = (zm)=>{
         navigation.push(zm)
     }
@@ -35,12 +50,17 @@ export default function Zestawy({navigation, route}) {
             </Pressable>
         </View>
         <ScrollView style={styles.darkBg}>
+            <Searchbar style={styles.wyszukiwanie}
+                placeholder="Search"
+                onChangeText={onChangeSearch}
+                value={searchQuery}/>
             <View style={styles.container}>
                 <View style={styles.row}>
                     {ZLista.map((item)=>(
                         <Przedmiot key={item.id}
                         item = {item}
-                        onToggle={onToggle}/>
+                        onToggle={onToggle}
+                        search = {searchQuery}/>
                     ))}
                 </View>
             </View>

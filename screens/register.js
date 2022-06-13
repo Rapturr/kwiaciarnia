@@ -104,7 +104,7 @@ export default function Register({ navigation, route, newData}){
                 marginBottom:20,
                 width:280,
                 padding: 15,
-                backgroundColor: 'rgba(1,1,1,0.8)',
+                backgroundColor: 'rgba(40,40,40,100)',
                 color: 'white',}}multiline = {false}
                 numberOfLines={1}
                 maxLength={50}
@@ -117,7 +117,7 @@ export default function Register({ navigation, route, newData}){
                     marginBottom:20,
                     width:280,
                     padding: 15,
-                    backgroundColor: 'rgba(1,1,1,0.8)',
+                    backgroundColor: 'rgba(40,40,40,100)',
                     color: 'white',}}multiline = {false}
                     numberOfLines={1}
                     maxLength={50}/>
@@ -129,11 +129,10 @@ export default function Register({ navigation, route, newData}){
                     marginBottom:20,
                     width:280,
                     padding: 15,
-                    backgroundColor: 'rgba(1,1,1,0.8)',
+                    backgroundColor: 'rgba(40,40,40,100)',
                     color: 'white',}}multiline = {false}
                     numberOfLines={1}
                     maxLength={50}/>
-
 
                 <Pressable style={styles.przycisk} onPress={()=>onSubmit()}>
                     <Text style={styles.przyciskText}>Zatwierdź!</Text>

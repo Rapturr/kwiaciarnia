@@ -8,6 +8,7 @@ export default function Banner() {
             <ImageBackground style={styles.banner} source={require("../assets/banner.png")}>
                 <Text style={styles.bannerText}>Poczta Kwiatowa</Text>
             </ImageBackground>
+            <View style={styles.banner_underside}><Text>.</Text></View>
         </>
     ) 
 }

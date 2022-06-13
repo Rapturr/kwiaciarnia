@@ -25,7 +25,22 @@ export default function Opis({navigation, route}) {
             <TouchableOpacity style={{marginTop:20, justifyContent: 'center',}} onPress={()=>{route.params.onAdd(id,nazwa,cena,sciezka)}}>
                 <Text style={styles.przyciskText}>Dodaj do koszyka</Text>
             </TouchableOpacity>
+            
         </View>
     </>
     ) 
 }
+
+/*
+<TouchableOpacity style={{ width: 140,}} onPress={()=>{route.params.onAdd(id,nazwa,cena,sciezka)}}>
+                <Text style={{
+                    //marginLeft:50,
+                    marginRight:"auto",
+                    paddingLeft: 50,
+                    padding: 15,
+                    width: 140,
+                color: 'rgba(126,145,188,255)',
+                backgroundColor:'rgba(60,70,100,255)',
+      }}>Edytuj</Text>
+            </TouchableOpacity>
+             */
